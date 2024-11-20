@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>获取页面数据</title>
+  <script src="tailwind.js"></script>
+</head>
+<body class="w-popup min-h-popup p-5 bg-gray-50 m-0 font-sans w-[700px] h-[300px]">
+  <div class="mx-auto">
+    <div class="flex items-center space-x-4 mb-4">
+      <div class="text-gray-700 font-medium">
+        产品：
+      </div>
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="searchType" value="搜索" class="form-radio text-blue-500 h-4 w-4 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" checked>
+        <span class="ml-2 text-gray-700">搜索</span>
+      </label>
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="searchType" value="内容" class="form-radio text-blue-500 h-4 w-4 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        <span class="ml-2 text-gray-700">内容</span>
+      </label>
+    </div>
+    <div class="text-sm text-gray-500 mb-2">请输入渠道名称，每行一个</div>
+    <textarea id="textarea" class="w-full h-32 border border-gray-300 rounded-lg p-2 mb-4 resize-none"></textarea>
+    <div class="flex items-center mb-4">
+      <span class="mr-2">或</span>
+      <div class="flex-1 border-t border-gray-300"></div>
+    </div>
+    <div class="flex items-center space-x-2 mb-4">
+      <label class="text-gray-700">渠道数量：</label>
+      <input type="text" id="channelCount" class="w-24 border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+      <span class="text-sm text-gray-500">如果不确定渠道名称，直接输入渠道数量</span>
+    </div>
+    <button 
+      id="getData" 
+      class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 mb-4 cursor-pointer border-0"
+    >
+      批量添加自定义渠道
+    </button>
+    
+    <div 
+      id="result" 
+      class="bg-white rounded-lg p-4 shadow-sm"
+    >
+      <!-- 结果将通过JavaScript动态插入这里 -->
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
