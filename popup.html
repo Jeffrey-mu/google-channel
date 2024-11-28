@@ -5,44 +5,53 @@
   <title>google adsense-批量添加自定义渠道</title>
   <script src="tailwind.js"></script>
 </head>
-<body class="w-popup min-h-popup p-5 bg-gray-50 m-0 font-sans w-[700px] h-[300px]">
-  <div class="mx-auto">
-    <div class="flex items-center space-x-4 mb-4">
-      <div class="text-gray-700 font-medium">
-        产品：
+<body class="w-popup bg-gray-100 m-0 font-sans w-[700px]">
+  <header class="bg-blue-500 p-3 text-white border-b-2 border-blue-700">
+    <h1 class="text-xl font-bold mb-1">Google AdSense 批量工具</h1>
+    <p class="text-sm text-blue-100">快速批量添加自定义渠道，提高工作效率</p>
+  </header>
+
+  <div class="p-4">
+    <div class="mx-auto bg-white p-4 rounded-lg shadow-sm">
+      <div class="flex items-center space-x-4 mb-3 bg-gray-50 p-2 rounded-lg">
+        <div class="text-gray-700 font-medium">
+          产品：
+        </div>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="searchType" value="搜索" class="form-radio text-blue-500 h-4 w-4 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" checked>
+          <span class="ml-2 text-gray-700">搜索</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="searchType" value="内容" class="form-radio text-blue-500 h-4 w-4 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          <span class="ml-2 text-gray-700">内容</span>
+        </label>
       </div>
-      <label class="inline-flex items-center cursor-pointer">
-        <input type="radio" name="searchType" value="搜索" class="form-radio text-blue-500 h-4 w-4 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" checked>
-        <span class="ml-2 text-gray-700">搜索</span>
-      </label>
-      <label class="inline-flex items-center cursor-pointer">
-        <input type="radio" name="searchType" value="内容" class="form-radio text-blue-500 h-4 w-4 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-        <span class="ml-2 text-gray-700">内容</span>
-      </label>
-    </div>
-    <div class="text-sm text-gray-500 mb-2">请输入渠道名称，每行一个</div>
-    <textarea id="textarea" class="w-full h-32 border border-gray-300 rounded-lg p-2 mb-4 resize-none"></textarea>
-    <div class="flex items-center mb-4">
-      <span class="mr-2">或</span>
-      <div class="flex-1 border-t border-gray-300"></div>
-    </div>
-    <div class="flex items-center space-x-2 mb-4">
-      <label class="text-gray-700">渠道数量：</label>
-      <input type="text" id="channelCount" class="w-24 border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
-      <span class="text-sm text-gray-500">如果不确定渠道名称，直接输入渠道数量</span>
-    </div>
-    <button 
-      id="getData" 
-      class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 mb-4 cursor-pointer border-0"
-    >
-      批量添加自定义渠道
-    </button>
-    
-    <div 
-      id="result" 
-      class="bg-white rounded-lg p-4 shadow-sm"
-    >
-      <!-- 结果将通过JavaScript动态插入这里 -->
+      <div class="bg-blue-50 p-3 rounded-lg mb-3">
+        <div class="text-sm text-gray-500 mb-2">请输入渠道名称，每行一个</div>
+        <textarea id="textarea" class="w-full h-24 border border-gray-300 rounded-lg p-2 mb-3 resize-none bg-white"></textarea>
+        <div class="flex items-center mb-3">
+          <span class="mr-2">或</span>
+          <div class="flex-1 border-t border-gray-300"></div>
+        </div>
+        <div class="flex items-center space-x-2">
+          <label class="text-gray-700">渠道数量：</label>
+          <input type="text" id="channelCount" class="w-24 border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white">
+          <span class="text-sm text-gray-500">如果不确定渠道名称，直接输入渠道数量</span>
+        </div>
+      </div>
+      <button 
+        id="getData" 
+        class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 mb-3 cursor-pointer border-0"
+      >
+        批量添加自定义渠道
+      </button>
+      
+      <div 
+        id="result" 
+        class="bg-gray-50 rounded-lg p-3 shadow-sm"
+      >
+        <!-- 结果将通过JavaScript动态插入这里 -->
+      </div>
     </div>
   </div>
   <script src="popup.js"></script>
